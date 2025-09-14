@@ -35,5 +35,13 @@ jobs:
       - name: Terraform Init
         working-directory: ${{ env.TERRAFORM_PATH }}
         run: terraform init
+
+      - name: Terraform Plan
+        working-directory: ${{ env.TERRAFORM_PATH }}
+        run: terraform plan -out=tfplan -input=false
+
+      - name: Terraform Apply
+        working-directory: ${{ env.TERRAFORM_PATH }}
+        run: terraform apply -input=false -auto-approve tfplan
       
 
