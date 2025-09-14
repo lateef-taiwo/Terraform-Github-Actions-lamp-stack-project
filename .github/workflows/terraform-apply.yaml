@@ -50,6 +50,6 @@ jobs:
 
       - name: Terraform Apply
         working-directory: ${{ env.TERRAFORM_PATH }}
-        run: terraform apply -auto-approve
+        run: terraform destroy -auto-approve
       
 
