@@ -1,0 +1,1 @@
+LAMP: Linux, Apache, MySQL/Mariadb, Python or PHP
