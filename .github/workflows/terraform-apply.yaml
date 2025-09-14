@@ -1,4 +1,4 @@
-name: Terraform Infrastructure Deployment Pipeline
+name: Terraform Apply Infrastructure Deployment Pipeline
 
 on:
   # push:
