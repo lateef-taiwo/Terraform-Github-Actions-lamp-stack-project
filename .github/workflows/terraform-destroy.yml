@@ -33,10 +33,10 @@ jobs:
         working-directory: ${{ env.TERRAFORM_PATH }}
         run: terraform init
 
-    #   - name: Terraform plan for destroy
-    #     working-directory: ${{ env.TERRAFORM_PATH }}
-    #     run: terraform plan -destroy -out=tfplan -input=false
+      - name: Terraform plan for destroy
+        working-directory: ${{ env.TERRAFORM_PATH }}
+        run: terraform plan -destroy -input=false
 
       - name: Terraform Destroy
         working-directory: ${{ env.TERRAFORM_PATH }}
-        run: terraform apply -input=false -auto-approve tfplan
+        run: terraform destroy -input=false -auto-approve
